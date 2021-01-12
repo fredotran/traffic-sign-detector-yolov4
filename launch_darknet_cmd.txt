@@ -1,5 +1,0 @@
-Type this execution command in the Prompt Command to train the model with darknet in this configuration :
-darknet.exe detector train ../data/obj.data ../cfg/yolov4-rds-colab.cfg ../weights/yolov4-rds-best_last.weights -map
-
-Type this execution command in the Prompt Command to test the model with darknet in this configuration :
-darknet.exe detector test ../data/obj.data ../cfg/yolov4-rds-colab.cfg ../weights/yolov4-rds-best_last.weights -map 

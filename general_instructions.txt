@@ -1,8 +1,26 @@
+##################################################################################################################################
+##################################################################################################################################
 Get the detailed instructions here to download and setup OpenCV for GPU
 
 https://medium.com/analytics-vidhya/build-opencv-from-source-with-cuda-for-gpu-access-on-windows-5cd0ce2b9b37
 
+
+##################################################################################################################################
 Get the detailed instructions here to download and setup darknet for YoloV4 on Windows :
 
 https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake
-https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-vcpkg
+https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-vcpkg    
+
+##################################################################################################################################
+##################################################################################################################################    
+Type this execution command in the Prompt Command to train the model with darknet in this configuration (on Windows Powershell) :
+
+    .\darknet.exe detector train ../data/obj.data ../cfg/yolov4-rds.cfg ../weights/yolov4-rds_last.weights -map
+
+##################################################################################################################################
+Type this execution command in the Prompt Command to test the model with darknet in this configuration (on Windows Powershell) :
+
+    .\darknet.exe detector test ../data/obj.data ../cfg/yolov4-rds.cfg ../weights/yolov4-rds_last.weights -map 
+
+##################################################################################################################################
+##################################################################################################################################

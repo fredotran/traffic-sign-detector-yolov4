@@ -19,7 +19,7 @@ else:
     pass
 
 # download the last version of YOLOv4 darknet
-url = "https://app.roboflow.com/ds/sXWjsufRH3?key=xroPHpt1sy"
+url = "https://github.com/fredotran/traffic-signs-detection/releases/download/weights/Traffic.Road.Signs.YoloV3.format.v2-10-01-2021.darknet.zip"
 wget.download(url, downloaded_data_path)
 
 ##################################################################
