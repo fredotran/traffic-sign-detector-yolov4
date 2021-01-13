@@ -62,7 +62,9 @@ It will call this **[Python file](https://github.com/fredotran/traffic-signs-det
 
 ## Train, validation and test sets (data) setups.
 
-(**Local version**) : I'm providing the dataset **[here](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/Traffic.Road.Signs.YoloV3.format.v2-10-01-2021.darknet.zip)**, if you want to do the splitting, parsing of the train, validation and test sets and extracting the files manually. /!\ **In case of laziness** /!\ (*I know this feeling quite well*), I did "**two little scripts**" : [download_sets.py](https://github.com/fredotran/traffic-signs-detection/blob/main/download_sets.py) and [setup_sets.py](https://github.com/fredotran/traffic-signs-detection/blob/main/setup_sets.py) to automate the downaloading, extracting and splitting into training, validation and test sets.
+(**Local version**) : I'm providing the dataset **[here](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/Traffic.Road.Signs.YoloV3.format.v2-10-01-2021.darknet.zip)**, if you want to do the splitting, parsing of the train, validation and test sets and extracting the files manually. 
+
+/!\ **In case of laziness** /!\ (*I know this feeling quite well*), I did "**two little scripts**" : [download_sets.py](https://github.com/fredotran/traffic-signs-detection/blob/main/download_sets.py) and [setup_sets.py](https://github.com/fredotran/traffic-signs-detection/blob/main/setup_sets.py) to automate the downloading, extracting and splitting into training, validation and test sets.
 
 If you want to use my scripts, just open ` Windows Command Prompt`, go to the `traffic-signs-detection` folder and type the following commands by order : 
 * `python3 download_sets.py` : it will download the datasets and extract them in the `traffic-signs-detection` folder.
