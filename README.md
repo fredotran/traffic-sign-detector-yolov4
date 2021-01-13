@@ -9,7 +9,7 @@ This repository contains my upgraded version of [using YoloV3 with OpenCV DNN to
 * Crosswalk.
 * Stop signs.
 
-The photos for this dataset were taken by [Erik Mclean](https://unsplash.com/@introspectivedsgn) (big thank you to him).
+The photos for this dataset were taken by [Erik Mclean](https://unsplash.com/@introspectivedsgn) (big thanks to him).
 
 ---
 
@@ -94,8 +94,8 @@ The [`inputs`](https://github.com/fredotran/traffic-signs-detection/tree/main/in
 
 Using the notebooks for images, we can show some of the results : 
 
-![plot](results/images/yolov4res8.jpg)![plot](results/images/yolov4res11.jpg)
 ![plot](results/images/yolov4res7.jpg)
+![plot](results/images/yolov4res8.jpg) ![plot](results/images/yolov4res11.jpg)
 ![plot](results/images/yolov4res9.jpg)
 
 ---
@@ -110,4 +110,4 @@ Thank you Joseph Redmon and Ali Farhadi for their incredible work on **YOLO obje
 
 Thank you AlexeyAB for your repository : **[YOLOv4 improvement](https://github.com/AlexeyAB/darknet)**
 
-Thank you Andrew Mvd for your dataset : https://www.kaggle.com/andrewmvd
+Thank you Andrew Mvd for your dataset : [Kaggle profile](https://www.kaggle.com/andrewmvd)
