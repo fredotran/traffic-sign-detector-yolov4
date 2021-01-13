@@ -28,9 +28,7 @@ Each images contained in the training, test and validation sets are labelled usi
 
 --- 
 
-## Setup the working environment and requirements.
-
-### Requirements
+## Requirements.
 
 * [Cmake](https://cmake.org/runningcmake/)
 * [OpenCV 4.0 or higher](https://opencv.org/releases/) 
@@ -44,7 +42,9 @@ Each images contained in the training, test and validation sets are labelled usi
 
 To make custom training with YoloV4, we'll need first **to setup your working environment**. To make it easier for people to use, I developped some **utilities python files allowing** the automatisation of this process. So basically, what you'll need to do it's to launch the console command and type the following command in the **Python console** (it's not that hard I promise you). 
 
-### YoloV4 weights, darknet and OpenCV DNN (GPU) setups.
+--- 
+
+## YoloV4 weights, darknet and OpenCV DNN (GPU) setups.
 
 I'll present two ways to do custom training model for this particular detection task : the (**Local version**) and the 
 **(Easier/cloud version)**. The first one will need to do every setups in your code folder locally, the second one is much easier because everything is done in **[Google Colab](https://colab.research.google.com/)**
@@ -58,7 +58,9 @@ I'll present two ways to do custom training model for this particular detection 
 
 It will call this **[Python file](https://github.com/fredotran/traffic-signs-detection/blob/main/download_weights.py)** and launches the instructions inside. This command will download automatically the weights provided [here](https://github.com/fredotran/traffic-signs-detection/releases) and put them in the `weights` folder directly. You'll be able to manipulate the weights to do everything you want with them.
 
-### Train, validation and test sets (data) setups.
+--- 
+
+## Train, validation and test sets (data) setups.
 
 (**Local version**) : I'm providing the dataset **[here](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/Traffic.Road.Signs.YoloV3.format.v2-10-01-2021.darknet.zip)**, if you want to do the splitting, parsing of the train, validation and test sets and extracting the files manually. /!\ **In case of laziness** /!\ (*I know this feeling quite well*), I did "**two little scripts**" : [download_sets.py](https://github.com/fredotran/traffic-signs-detection/blob/main/download_sets.py) and [setup_sets.py](https://github.com/fredotran/traffic-signs-detection/blob/main/setup_sets.py) to automate the downaloading, extracting and splitting into training, validation and test sets.
 
@@ -103,6 +105,8 @@ Using the notebooks for images, we can show some of the results :
 ## About 
 
 This work project is the continuation of my first project combining [YoloV3 and OpenCV DNN](https://github.com/fredotran/yolov3-opencvdnn), I wanted to push furthermore and train the model only on specific categories for this particular detection task.
+
+--- 
 
 ## Acknowledgements
 
