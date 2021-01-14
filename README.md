@@ -86,7 +86,7 @@ To test your custom model, this is the same steps to do than training but instea
 
 (Again) needlessly to tell you to replace `CONFIG_NAME` and `WEIGHTS_NAME` by the **own** names you gave to these files ([more infos here](https://github.com/AlexeyAB/darknet#custom-object-detection)).
 
-Using the weights provided in this repository, the model achieved an **accuracy of 94.98%** on classification and detection of the 4 classes.
+Using the weights provided in this repository, the model achieved an **accuracy mAp @0.5 of 95.13%** on classification and detection of the 4 different classes.
 
 ---
 
@@ -94,7 +94,7 @@ Using the weights provided in this repository, the model achieved an **accuracy 
 
 In case or you want to test the custom model using **Jupyter Notebooks**, I'm providing two notebooks [for images testings](https://github.com/fredotran/traffic-signs-detection/blob/main/yolov4-traffic_road_signs-detection-images.ipynb) and [for videos testings](https://github.com/fredotran/traffic-signs-detection/blob/main/yolov4-traffic_road_signs-detection-videos.ipynb).
 
-The [`inputs`](https://github.com/fredotran/traffic-signs-detection/tree/main/inputs) folder contains images and videos for testing your custom model, feel free to add more images/videos you're finding relevant ! The [`results`](https://github.com/fredotran/traffic-signs-detection/tree/main/results) folder contains the outputs of our custom model when we input images and videos from the [`inputs`](https://github.com/fredotran/traffic-signs-detection/tree/main/inputs) folder.
+The [`inputs`](https://github.com/fredotran/traffic-signs-detection/tree/main/inputs) folder contains images and videos for testing your custom model, feel free to add more images/videos you're finding relevant ! The [`results`](https://github.com/fredotran/traffic-signs-detection/tree/main/results) folder contains the outputs of our custom model when we input images and videos from the ['inputs'] folder.
 
 Using the notebooks for images, we can show some of the results : 
 
