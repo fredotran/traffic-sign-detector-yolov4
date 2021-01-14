@@ -46,8 +46,7 @@ To make custom training with YoloV4, we'll need first **to setup your working en
 
 ## YoloV4 weights, darknet and OpenCV DNN (GPU) setups.
 
-I'll present two ways to do custom training model for this particular detection task : the (**Local version**) and the 
-**(Easier/cloud version)**. The first one will need to do every setups in your code folder locally, the second one is much easier because everything is done in **[Colab](https://colab.research.google.com/)**.
+I'll present two ways to do custom training model for this particular detection task : (**Local version**) and **(Easier/cloud version)**. The first one will need to do every setups in your code folder locally, the second one is much easier because everything is done in **[Colab](https://colab.research.google.com/)**.
 
 (**Local version**) : Before all, **if you want to train your own model** for this detection task you can do it. You'll need to setup first [OpenCV with a GPU back-end](https://medium.com/analytics-vidhya/build-opencv-from-source-with-cuda-for-gpu-access-on-windows-5cd0ce2b9b37). When you finished this first step, you'll have to install in the `traffic-signs-detection` folder and compile **the darknet YoloV4** in your workspace using **the following steps** : [if you want to use cmake](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake) , and this one [if you want to use vcpkg](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-vcpkg). All the steps are very well explained in [AlexeyAB repository](https://github.com/AlexeyAB/darknet) so I will not going in details here. The `backup` folder will contain your trained weights.
 
@@ -94,13 +93,13 @@ Using the [weights](https://github.com/fredotran/traffic-signs-detection/release
 
 In case or you want to test the custom model using **Jupyter Notebooks**, I'm providing two notebooks [for images testings](https://github.com/fredotran/traffic-signs-detection/blob/main/yolov4-traffic_road_signs-detection-images.ipynb) and [for videos testings](https://github.com/fredotran/traffic-signs-detection/blob/main/yolov4-traffic_road_signs-detection-videos.ipynb).
 
-The [`inputs`](https://github.com/fredotran/traffic-signs-detection/tree/main/inputs) folder contains images and videos for testing your custom model, feel free to add more images/videos you're finding relevant ! The [`results`](https://github.com/fredotran/traffic-signs-detection/tree/main/results) folder contains the outputs of our custom model when we input images and videos from the ['inputs'] folder.
+The [`inputs`](https://github.com/fredotran/traffic-signs-detection/tree/main/inputs) folder contains images and videos for testing your custom model, feel free to add more images/videos you're finding relevant ! The [`results`](https://github.com/fredotran/traffic-signs-detection/tree/main/results) folder contains the outputs of our custom model when we input images and videos from the `inputs` folder.
 
 Using the notebooks for images, we can show some of the results : 
 
 ![plot](results/images/yolov4res7.jpg) ![plot](results/images/test-9.jpg) ![plot](results/images/test-3.jpg)
-![plot](results/images/yolov4res8.jpg) ![plot](results/images/yolov4res11.jpg)
-![plot](results/images/yolov4res9.jpg) ![plot](results/images/test-8.jpg)
+![plot](results/images/yolov4res8.jpg) ![plot](results/images/test-8.jpg)
+![plot](results/images/yolov4res9.jpg) 
 
 ---
 
