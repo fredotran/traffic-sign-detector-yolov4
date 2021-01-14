@@ -47,7 +47,7 @@ To make custom training with YoloV4, we'll need first **to setup your working en
 ## YoloV4 weights, darknet and OpenCV DNN (GPU) setups.
 
 I'll present two ways to do custom training model for this particular detection task : the (**Local version**) and the 
-**(Easier/cloud version)**. The first one will need to do every setups in your code folder locally, the second one is much easier because everything is done in **[Google Colab](https://colab.research.google.com/)**
+**(Easier/cloud version)**. The first one will need to do every setups in your code folder locally, the second one is much easier because everything is done in **[Colab](https://colab.research.google.com/)**.
 
 (**Local version**) : Before all, **if you want to train your own model** for this detection task you can do it. You'll need to setup first [OpenCV with a GPU back-end](https://medium.com/analytics-vidhya/build-opencv-from-source-with-cuda-for-gpu-access-on-windows-5cd0ce2b9b37). When you finished this first step, you'll have to install in the `traffic-signs-detection` folder and compile **the darknet YoloV4** in your workspace using **the following steps** : [if you want to use cmake](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake) , and this one [if you want to use vcpkg](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-vcpkg). All the steps are very well explained in [AlexeyAB repository](https://github.com/AlexeyAB/darknet) so I will not going in details here. The `backup` folder will contain your trained weights.
 
@@ -77,16 +77,16 @@ If you want to use my scripts, just open ` Windows Command Prompt`, go to the `t
 ## Training and evaluate our custom model
 
 (**Local version**) : Now, we can start to train our custom model. In order to see if your [darknet installation](https://github.com/AlexeyAB/darknet) is working on Windows. To do that, we'll just launch a `Windows PowerShell Console`, go to the `traffic-signs-detection` folder and type the following command : 
-* `.\darknet.exe detector train ../data/obj.data ../cfg/[CONFIG_NAME].cfg ../weights/[WEIGHTS_NAME].weights -map` 
+* `.\darknet.exe detector train ../data/obj.data ../cfg/[CONFIG].cfg ../weights/[WEIGHTS].weights -map` 
 
-Needlessly to tell you to replace `CONFIG_NAME` and `WEIGHTS_NAME` by the **own** names you gave to these files ([more infos here](https://github.com/AlexeyAB/darknet#when-should-i-stop-training)).
+Needlessly to tell you to replace `CONFIG` and `WEIGHTS` by the **own** names you gave to these files ([more infos here](https://github.com/AlexeyAB/darknet#when-should-i-stop-training)).
 
 To test your custom model, this is the same steps to do than training but instead you have to enter this command : 
-* `.\darknet.exe detector test ../data/obj.data ../cfg/[CONFIG_NAME].cfg ../weights/[WEIGHTS_NAME].weights -map` 
+* `.\darknet.exe detector test ../data/obj.data ../cfg/[CONFIG].cfg ../weights/[WEIGHTS].weights -map` 
 
-(Again) needlessly to tell you to replace `CONFIG_NAME` and `WEIGHTS_NAME` by the **own** names you gave to these files ([more infos here](https://github.com/AlexeyAB/darknet#custom-object-detection)).
+(Again) needlessly to tell you to replace `CONFIG` and `WEIGHTS` by the **own** names you gave to these files ([more infos here](https://github.com/AlexeyAB/darknet#custom-object-detection)).
 
-Using the weights provided in this repository, the model achieved an **accuracy mAp @0.5 of 95.13%** on classification and detection of the 4 different classes.
+Using the [weights](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/yolov4-rds_best_2000.weights) provided in this repository, the model achieved an **accuracy mAp @0.5 of 95.13%** on classification and detection of the 4 different classes.
 
 ---
 
@@ -98,9 +98,9 @@ The [`inputs`](https://github.com/fredotran/traffic-signs-detection/tree/main/in
 
 Using the notebooks for images, we can show some of the results : 
 
-![plot](results/images/yolov4res7.jpg)
+![plot](results/images/yolov4res7.jpg) ![plot](results/images/test-9.jpg) ![plot](results/images/test-3.jpg)
 ![plot](results/images/yolov4res8.jpg) ![plot](results/images/yolov4res11.jpg)
-![plot](results/images/yolov4res9.jpg)
+![plot](results/images/yolov4res9.jpg) ![plot](results/images/test-8.jpg)
 
 ---
 
