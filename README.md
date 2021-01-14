@@ -52,10 +52,10 @@ I'll present two ways to do custom training model for this particular detection 
 
 Before all, you'll first need to install and setup [OpenCV with a GPU back-end](https://medium.com/analytics-vidhya/build-opencv-from-source-with-cuda-for-gpu-access-on-windows-5cd0ce2b9b37), as we will need [OpenCV DNN](https://docs.opencv.org/master/d2/d58/tutorial_table_of_content_dnn.html) module : this is **mandatory**.  
 
-* **If you want to train your own model** for this detection task you can do it as following :
-After the OpenCV installation in the root folder containing your `traffic-signs-detection` folder, you'll have to install and compile **[the darknet YoloV4](https://github.com/AlexeyAB/darknet)** algorithm in your workspace by doing these setups tutorial : [if you want to use cmake](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake), and this one [if you want to use vcpkg](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-vcpkg). All the steps to train your custom model are very well explained in [AlexeyAB repository](https://github.com/AlexeyAB/darknet) so I will not going in details here. The `backup` folder generated will store your trained weights.
+* **If you want to train your own model** for this detection task you can do it as following :  
+After the OpenCV installation in the root folder containing your `traffic-signs-detection` folder, you'll have to install and compile **[the darknet YoloV4](https://github.com/AlexeyAB/darknet)** algorithm in your workspace by doing these setups tutorial : [if you want to use cmake](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake), and this one [if you want to use vcpkg](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-vcpkg). All the steps to setup and train your custom model are very well explained in [AlexeyAB repository](https://github.com/AlexeyAB/darknet) so I will not going in details here. The `backup` folder generated will store your trained weights.
 
-* **If you want to use my pre-trained weights** you can simply open a ` Windows Command Prompt`, go to the `traffic-signs-detection` folder and type the **following command** : `python3 download_weights.py`.
+* **If you want to use my pre-trained weights** you can simply open a ` Windows Command Prompt`, go to the `traffic-signs-detection` folder and type the **following command** : `python3 download_weights.py`.  
 It will call this **[python file](https://github.com/fredotran/traffic-signs-detection/blob/main/download_weights.py)** and launches the instructions inside. This command will download automatically the weights provided [here](https://github.com/fredotran/traffic-signs-detection/releases) and put them in the `weights` folder directly. You'll be able to manipulate the weights to do everything you want with them.
 
 ### **Easier/cloud version** : 
@@ -90,7 +90,10 @@ To test your custom model, this is the same steps to do than training but instea
 
 (Again) needlessly to tell you to replace `CONFIG` and `WEIGHTS` by the **own** names you gave to these files ([more infos here](https://github.com/AlexeyAB/darknet#custom-object-detection)).
 
-Using the [weights](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/yolov4-rds_best_2000.weights) provided in this repository, the model achieved an **accuracy mAp @0.5 of 95.13%** on classification and detection of the 4 different classes.
+---
+## Model accuracy
+
+Using the [weights](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/yolov4-rds_best_2000.weights) provided in this repository, the model achieved an **accuracy mAp @0.5 of 95.13%** (*it tooks ~ 2000 iterations*) on classification and detection of the 4 different traffic road signs classes.
 
 ---
 
