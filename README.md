@@ -48,14 +48,19 @@ To make custom training with YoloV4, we'll need first **to setup your working en
 
 I'll present two ways to do custom training model for this particular detection task : (**Local version**) and **(Easier/cloud version)**. The first one will need to do every setups in your code folder locally, the second one is much easier because everything is done in **[Colab](https://colab.research.google.com/)**.
 
-(**Local version**) : Before all, **if you want to train your own model** for this detection task you can do it. You'll need to setup first [OpenCV with a GPU back-end](https://medium.com/analytics-vidhya/build-opencv-from-source-with-cuda-for-gpu-access-on-windows-5cd0ce2b9b37). When you finished this first step, you'll have to install in the `traffic-signs-detection` folder and compile **the darknet YoloV4** in your workspace using **the following steps** : [if you want to use cmake](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake) , and this one [if you want to use vcpkg](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-vcpkg). All the steps are very well explained in [AlexeyAB repository](https://github.com/AlexeyAB/darknet) so I will not going in details here. The `backup` folder will contain your trained weights.
+### **Local version** : 
 
-**(Easier/cloud version)** : You can also use this **[Google Colab notebook](https://colab.research.google.com/drive/1WcBZGXvFGsOacyXI4U0OI4_bgUsX2pdG#scrollTo=NjKzw2TvZrOQ)** if you do not have enough computational ressources to perform the training. The `backup` folder will contain your trained weights, you'll juste need to collect them after enough training of your model.
+Before all, you'll first need to install and setup [OpenCV with a GPU back-end](https://medium.com/analytics-vidhya/build-opencv-from-source-with-cuda-for-gpu-access-on-windows-5cd0ce2b9b37), as we will need [OpenCV DNN](https://docs.opencv.org/master/d2/d58/tutorial_table_of_content_dnn.html) module : this is **mandatory**.  
 
-**If you want to use my pre-trained weights** you can simply open a ` Windows Command Prompt`, go to the `traffic-signs-detection` folder and type the following command : 
-* `python3 download_weights.py`.
+* **If you want to train your own model** for this detection task you can do it as following :
+After the OpenCV installation in the root folder containing your `traffic-signs-detection` folder, you'll have to install and compile **[the darknet YoloV4](https://github.com/AlexeyAB/darknet)** algorithm in your workspace by doing these setups tutorial : [if you want to use cmake](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-cmake), and this one [if you want to use vcpkg](https://github.com/AlexeyAB/darknet#how-to-compile-on-windows-using-vcpkg). All the steps to train your custom model are very well explained in [AlexeyAB repository](https://github.com/AlexeyAB/darknet) so I will not going in details here. The `backup` folder generated will store your trained weights.
 
-It will call this **[Python file](https://github.com/fredotran/traffic-signs-detection/blob/main/download_weights.py)** and launches the instructions inside. This command will download automatically the weights provided [here](https://github.com/fredotran/traffic-signs-detection/releases) and put them in the `weights` folder directly. You'll be able to manipulate the weights to do everything you want with them.
+* **If you want to use my pre-trained weights** you can simply open a ` Windows Command Prompt`, go to the `traffic-signs-detection` folder and type the **following command** : `python3 download_weights.py`.
+It will call this **[python file](https://github.com/fredotran/traffic-signs-detection/blob/main/download_weights.py)** and launches the instructions inside. This command will download automatically the weights provided [here](https://github.com/fredotran/traffic-signs-detection/releases) and put them in the `weights` folder directly. You'll be able to manipulate the weights to do everything you want with them.
+
+### **Easier/cloud version** : 
+
+You can also use this **[Google Colab notebook](https://colab.research.google.com/drive/1WcBZGXvFGsOacyXI4U0OI4_bgUsX2pdG#scrollTo=NjKzw2TvZrOQ)** if you do not have enough computational ressources to perform the training. The `backup` folder will contain your trained weights, you'll juste need to collect them after enough training of your model.
 
 --- 
 
