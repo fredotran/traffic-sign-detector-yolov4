@@ -15,7 +15,7 @@ def read_classes(file):
 
 # object detection function
 def object_detection(outputs, input_frame, confidenceThreshold):
-    """ This function will allow us to draw bounding boxes on detected objects in frames (images) """
+    """ This function will perform bounding boxes acquisition on detected objects in frames (images) """
     # first we'll collect the height, width and channel of the input frame (3 if the image is RGB, 1 if it's grayscale)
     height, width, channel = input_frame.shape
     
