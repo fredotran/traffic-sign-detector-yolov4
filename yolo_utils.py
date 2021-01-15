@@ -67,7 +67,7 @@ def nms_bbox(bounding_boxes, confidence_probs, confidenceThreshold, nmsThreshold
 # box drawing functions
 def box_drawing(input_frame, indices, bounding_boxes, class_objects, confidence_probs, classNames, color=(0,255,255), thickness=2):
     """ Drawing the detected objects boxes """
-    # once we have the indices, we'll extract the values of x,y,w,h of the best bounding boxes and stores it.
+    # once we have the indices, we'll extract the values of x,y,w,h of the best bounding boxes and store them.
     for i in indices:
         i = i[0]
         final_box = bounding_boxes[i]
@@ -99,8 +99,7 @@ def convert_to_blob(input_frame, network, height, width):
 # method to load our image from directory
 def load_image(image_path):    
     """ Loading the image with OpenCV by inputing the path /[Classes]/[ImageName]""" 
-
-    # get the video path and load the video
+    # get the image path and load the image
     img_full_path = './inputs/images' + image_path
     image = cv2.imread(img_full_path)
     
