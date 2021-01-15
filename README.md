@@ -15,16 +15,16 @@ The photos for this dataset were taken by [Erik Mclean](https://unsplash.com/@in
 
 ## About the dataset.
 
-### Images
+### Images.
 This [dataset](https://www.kaggle.com/andrewmvd/road-sign-detection) contains **877 images** of **4 distinct classes** for the purpose of road sign detection.
-Bounding box annotations were provided in the **PASCAL VOC format**, I transformed the data in **YoloV4 format** to make it easier for this project using [roboflow](https://roboflow.com/), you can download my YOLOv4 format version of the dataset **[here](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/Traffic.Road.Signs.YoloV3.format.v2-10-01-2021.darknet.zip)**. 
+Bounding box annotations were provided in the **PASCAL VOC format**, I transformed the data in **YoloV4 format** to make it easier for this project (using [roboflow](https://roboflow.com/)), you can download my YOLOv4 format version of the dataset **[here](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/Traffic.Road.Signs.YoloV3.format.v2-10-01-2021.darknet.zip)**. 
 
-### Labels
+### Labels.
 
 Each images contained in the training, test and validation sets are labelled using the YoloV4 Format **i.e** : 
 * One row per object
 * Each row is `confidenceProbability, x_center, y_center, width, heigh, classProbability...`
-* If there is more than one class, each row will be `confidenceProbability, x_center, y_center, width, heigh, (i)classProbability, (i+1)classProbability...(i+n)classProbability.`
+* If there is more than one class, each row will be `confidenceProbability, x_center, y_center, width, heigh, (1st)classProbability, (2nd)classProbability...(k)classProbability.`
 
 --- 
 
@@ -74,13 +74,13 @@ If you want to use my scripts, just open ` Windows Command Prompt`, go to the `t
 * `python3 download_sets.py` : it will download the datasets and extract them in the `traffic-signs-detection` folder.
 * `python3 setup_sets.py` : this one will split and copy the **images** and **labels** in the proper folders ([more infos here](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)).
 
-**After doing all these steps, you're ready to train your custom model using the [pre-trained YoloV4 weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137) downloaded !**
+**After doing all these steps, you're ready to train your custom model using the downloaded [pre-trained YoloV4 weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137) !**
 
 ---
 
-## Training and evaluate our custom model
+## Training and evaluate our custom model.
 
-(**Local version**) : Now, we can start to train our custom model. In order to see if your [darknet installation](https://github.com/AlexeyAB/darknet) is working on Windows. To do that, we'll just launch a `Windows PowerShell Console`, go to the `traffic-signs-detection` folder and type the following command : 
+(**Local version**) : Now, you can start to train our custom model. In order to see if your [darknet installation](https://github.com/AlexeyAB/darknet) is working on Windows. To do that, you'll just have to launch a `Windows PowerShell Console`, go to the `traffic-signs-detection` folder and type the following command : 
 * `.\darknet.exe detector train ../data/obj.data ../cfg/[CONFIG].cfg ../weights/[WEIGHTS].weights -map` 
 
 Needlessly to tell you to replace `CONFIG` and `WEIGHTS` by the **own** names you gave to these files ([more infos here](https://github.com/AlexeyAB/darknet#when-should-i-stop-training)).
@@ -91,13 +91,13 @@ To test your custom model, this is the same steps to do than training but instea
 (Again) needlessly to tell you to replace `CONFIG` and `WEIGHTS` by the **own** names you gave to these files ([more infos here](https://github.com/AlexeyAB/darknet#custom-object-detection)).
 
 ---
-## Model accuracy
+## Model performance and results.
 
 Using the [weights](https://github.com/fredotran/traffic-signs-detection/releases/download/weights/yolov4-rds_best_2000.weights) provided in this repository, the model achieved an **accuracy mAp @0.5 of 95.13%** (*it tooks ~ 2000 iterations*) on classification and detection of the 4 different traffic road signs classes.
 
 ---
 
-## Notebooks
+## Notebooks.
 
 In case or you want to test the custom model using **Jupyter Notebooks**, I'm providing two notebooks [for images testings](https://github.com/fredotran/traffic-signs-detection/blob/main/yolov4-traffic_road_signs-detection-images.ipynb) and [for videos testings](https://github.com/fredotran/traffic-signs-detection/blob/main/yolov4-traffic_road_signs-detection-videos.ipynb).
 
@@ -111,13 +111,13 @@ Using the notebooks for images, we can show some of the results :
 
 ---
 
-## About 
+## About.
 
 This work project is the continuation of my first project combining [YoloV3 and OpenCV DNN](https://github.com/fredotran/yolov3-opencvdnn), I wanted to push furthermore and train the model only on specific categories for this particular detection task.
 
 --- 
 
-## Acknowledgements
+## Acknowledgements.
 
 Thank you Joseph Redmon and Ali Farhadi for their incredible work on **YOLO object detector** : **[YOLOv3: An Incremental Improvement](https://arxiv.org/abs/1804.02767)**, *Redmon, Joseph and Farhadi, Ali* ; arXiv, 2018.
 
