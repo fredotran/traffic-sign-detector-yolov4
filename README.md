@@ -40,7 +40,7 @@ Each images contained in the training, test and validation sets are labelled usi
 * [GPU with CudaCompiler](https://en.wikipedia.org/wiki/CUDA#GPUs_supported)
 * Lot of patience (but worth it)
 
-To make custom training with YoloV4, we'll need first **to setup your working environment**. To make it easier for people to use, I developped some **utilities python files allowing** the automatisation of this process. So basically, what you'll need to do it's to launch the console command and type the following command in the **Python console** (it's not that hard I promise you). 
+To make custom training with YoloV4, we'll need first **to setup your working environment**. To make it easier for people to use, I developped some **utilities python files allowing** the automatisation of this process. So basically, what you'll need to do it's to launch the console (Windows Shell) and execute the commands in the **Python console** (it's not that hard I promise you). 
 
 --- 
 
