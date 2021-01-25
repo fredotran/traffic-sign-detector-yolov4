@@ -40,13 +40,13 @@ Each images contained in the training, test and validation sets are labelled usi
 * [GPU with CudaCompiler](https://en.wikipedia.org/wiki/CUDA#GPUs_supported)
 * Lot of patience (but worth it)
 
-To make custom training with YoloV4, we'll need first **to setup your working environment**. To make it easier for people to use, I developped some **utilities python files allowing** the automatisation of this process. So basically, what you'll need to do it's to launch the console (Windows Shell) and execute the commands in the **Python console** (it's not that hard I promise you). 
+To make custom training with YoloV4, we'll need first **to setup our working environment**. To make it easier for people to use, I developped some **utilities python files allowing** the automatisation of this process. So basically, all you'll need to do it's to launch the console (Windows Shell) and execute the commands in the **Python console** (it's not that hard I promise you). 
 
 --- 
 
 ## YoloV4 weights, darknet and OpenCV DNN (GPU) setups.
 
-I'll present two ways to do custom training model for this particular detection task : (**Local version**) and **(Easier/cloud version)**. The first one will need to do every setups in your code folder locally, the second one is much easier because everything is done in **[Colab](https://colab.research.google.com/)**.
+I'll present two ways to do custom training model for this particular detection task : (**Local version**) and **(Easier/cloud version)**. The first one will need to do every steps of installation directly in your code folder (locally), the second one is much easier because everything is done in **[Colab](https://colab.research.google.com/)**.
 
 ### **Local version** : 
 
