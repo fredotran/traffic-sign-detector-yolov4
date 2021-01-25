@@ -35,19 +35,3 @@ for zipfiles in glob.iglob(os.path.join(downloaded_data_path, "*.zip")):
        zipObj.extractall(parent_dir)
 
 print("\n Extraction complete!")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
